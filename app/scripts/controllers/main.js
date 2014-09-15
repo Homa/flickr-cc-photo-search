@@ -2,12 +2,12 @@
 
 angular.module('FlickrCC')
 
-  .controller('MainCtrl', function($scope, $location, version, GetPicList) {
+  .controller('MainCtrl', function($scope, $location, version, GetPicsList) {
 
   	$scope.doSearch = function() {
   		
   		var searchTerm = $scope.searchTerm;
-  		GetPicList.getPiclist(searchTerm)
+  		GetPicsList.getPicsList(searchTerm)
   			.then(function(data){
   			});
   	};
