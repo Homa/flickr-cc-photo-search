@@ -334,9 +334,9 @@ module.exports = function(grunt) {
         'less'
       ],
       dist: [
-        'less:dist',
-        'imagemin',
-        'svgmin'
+        'less:dist'
+        //'imagemin',
+        //'svgmin'
       ]
     },
 
