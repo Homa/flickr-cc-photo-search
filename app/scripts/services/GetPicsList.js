@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('FlickrCC').
-factory( 'GetPicsList', ['$http', '$log', 'Configfunction', function($http, $log, Config) {
+factory( 'GetPicsList', ['$http', '$log', 'Config', function($http, $log, Config) {
   
   // API reference: https://www.flickr.com/services/api/flickr.photos.search.html
   
@@ -14,8 +14,8 @@ factory( 'GetPicsList', ['$http', '$log', 'Configfunction', function($http, $log
     var method  = '&method=' + 'flickr.photos.search';
     var perPage = '&per_page=' + Config.getNoPerPage();
     var searchText = '&text=' + searchTerm;
-    var license = '&license=' + 
-    var url = _getBaseUrl() + method + perPage + searchTerm + searchText;
+    license = '&license=' + license;
+    var url = _getBaseUrl() + method + perPage + searchTerm + searchText + license;
 
     return $http.jsonp(url)
             .success(function(result) {
