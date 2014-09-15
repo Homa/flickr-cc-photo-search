@@ -49,6 +49,13 @@
 </head>
 
 <body ontouchstart ng-controller="MainCtrl">
+  <div class="header">
+    <a href="/">
+      <span class="logo-thick">flickr</span>
+      <span class="logo-thin">CC</span>
+    </a>
+    <br>Search Creative Common Photos on Flickr
+  </div>
   <div ng-view></div>
 
   <!-- build:js scripts/components.min.js -->
@@ -68,6 +75,7 @@
   <script src="scripts/services/Config.js"></script>
   <script src="scripts/services/GetPicsList.js"></script>
   <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/picsResult.js"></script>
 
   <!-- endbuild -->
 

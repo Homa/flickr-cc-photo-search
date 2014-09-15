@@ -94,26 +94,31 @@
 .modal-footer:after {
   clear: both;
 }
-/* line 34, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
+/* line 17, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
 html,
 body {
   height: 100%;
 }
-/* line 39, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
+/* line 22, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
 body {
   font-family: 'Anaheim';
   font-size: 17px;
   background-color: #f0f0f0;
   text-align: center;
 }
-/* line 49, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
+/* line 29, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
 h1 {
   font-family: 'Open Sans Condensed', sans-serif !important;
   font-size: 167%;
   font-weight: 300;
   line-height: 120%;
 }
-/* line 56, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
+/* line 40, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+/* line 45, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
 input[type="text"],
 button {
   border-radius: 0 !important;
@@ -125,94 +130,36 @@ button {
   box-shadow: none !important;
   height: 40px;
 }
-/* line 67, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
+/* line 56, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
 .btn-primary {
   background-color: #14c1cc;
   border-color: #13b8c3;
 }
-/* line 72, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
+/* line 61, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
 .btn-primary:hover {
   background-color: #13b8c3;
 }
-/* line 79, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
-.masthead-brand {
-  margin-top: 10px;
-  margin-bottom: 10px;
+/* line 69, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
+.header {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 100%;
+  text-align: center;
+  padding: 5px;
 }
-/* line 84, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
-.masthead-nav > li {
-  display: inline-block;
+/* line 76, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
+.header a {
+  color: none;
+  text-decoration: none;
+}
+/* line 81, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
+.logo-thick {
+  font-weight: 700;
+  font-size: 170%;
+  color: #000000;
 }
 /* line 87, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
-.masthead-nav > li + li {
-  margin-left: 20px;
-}
-/* line 90, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
-.masthead-nav > li > a {
-  padding-left: 0;
-  padding-right: 0;
-  font-size: 16px;
-  font-weight: bold;
-  border-bottom: 2px solid transparent;
-}
-/* line 99, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
-.masthead-nav > li > a:hover,
-.masthead-nav > li > a:focus {
-  background-color: transparent;
-  border-bottom-color: rgba(255, 255, 255, 0.25);
-}
-/* line 104, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
-.masthead-nav > .active > a,
-.masthead-nav > .active > a:hover,
-.masthead-nav > .active > a:focus {
-  border-bottom-color: #000;
-}
-@media (min-width: 768px) {
-  /* line 112, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
-  .masthead-brand {
-    float: left;
-  }
-  /* line 115, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
-  .masthead-nav {
-    float: right;
-  }
-}
-/* line 125, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
-.cover {
-  padding: 0 20px;
-}
-/* line 128, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
-.cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
-}
-@media (min-width: 768px) {
-  /* line 150, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
-  .masthead {
-    position: fixed;
-    top: 0;
-  }
-  /* line 154, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
-  /* line 159, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
-  .site-wrapper-inner {
-    vertical-align: middle;
-  }
-  /* line 163, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 100%;
-  }
-}
-@media (min-width: 992px) {
-  /* line 171, /Users/homa/gitProject/flickr-cc-photo-search/app/styles/main.less */
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 700px;
-  }
+.logo-thin {
+  font-weight: 300;
+  color: #14c1cc;
+  font-size: 170%;
 }

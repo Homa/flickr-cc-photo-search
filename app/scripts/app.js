@@ -12,8 +12,8 @@ angular.module('FlickrCC', ['ngAnimate', 'ngResource', 'ngRoute', 'ngTouch'])
       .when('/', {
         templateUrl: 'views/home.html'
       })
-      .when('/features', {
-        templateUrl: 'views/features.html'
+      .when('/search/results', {
+        templateUrl: 'views/picsResult.html'
       })
       .when('/contact', {
         templateUrl: 'views/contact.html'

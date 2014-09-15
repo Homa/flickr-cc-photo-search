@@ -1,11 +1,15 @@
-<div class="container" style="max-width:500px;" ng-controller="MainCtrl">
-  <div class="header">
-    <h1>Search Creative Common Photos on Flickr</h1>
+<form role="form" class="form-container form-horizontal" ng-submit="doSearch()" ng-controller="MainCtrl">
+  <label class="checkbox-inline">
+    <input type="checkbox" ng-model="nonCommercial"> Non Commercial
+  </label>
+  <label class="checkbox-inline">
+    <input type="radio" ng-model="noDerivativeShareAlik" value="noDerivative"> No Derivative
+  </label>
+  <label class="checkbox-inline">
+    <input type="radio" ng-model="noDerivativeShareAlik" value="shareAlik">Share Alik
+  </label>
+  <div class="form-group form-group-lg" style="margin:0px;">
+    <input type="text" class="form-control" ng-model="searchTerm" placeholder="Search ...">
   </div>
-  <form role="form" class="form-horizontal" style="padding: 20px;" ng-submit="doSearch()">
-    <div class="form-group form-group-lg" style="margin:0px;">
-      <input type="text" class="form-control" ng-model="searchTerm">
-    </div>
-    <button type="submit" class="btn btn-primary btn-lg btn-block" style="margin-top:20px;">Submit</button>
-  </form>      
-</div>
+  <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+</form>      

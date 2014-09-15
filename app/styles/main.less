@@ -10,23 +10,6 @@
 @gray-light: #f0f0f0;
 @gray-dark: #404040;
 
-// Links
-a,
-a:focus,
-a:hover {
-  //color: #fff;
-}
-
-// Custom default button
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
-  //color: #333;
-  //text-shadow: none; // Prevent inheritence from `body`
-  //background-color: #fff;
-  //border: 1px solid #fff;
-}
-
 //
 // Base structure
 //
@@ -40,10 +23,7 @@ body {
   font-family: 'Anaheim';
   font-size:17px;
   background-color: @gray-light;
-  //color: #fff;
   text-align: center;
-  //text-shadow: 0 1px 3px rgba(0,0,0,.5);
-  //box-shadow: inset 0 0 100px rgba(0,0,0,.5);
 }
 
 h1 {
@@ -51,6 +31,15 @@ h1 {
   font-size: 167%;
   font-weight: 300;
   line-height: 120%;
+}
+
+//
+// Home Search Form
+//
+
+.form-container {
+  max-width:500px;
+  margin: 0 auto;
 }
 
 input[type="text"],
@@ -76,106 +65,35 @@ button {
 //
 // Header
 //
-.masthead-brand {
-  margin-top: 10px;
-  margin-bottom: 10px;
+
+.header {
+    font-family: 'Open Sans Condensed',sans-serif;
+    font-size: 100%;
+    text-align: center;
+    padding: 5px;
 }
 
-.masthead-nav > li {
-  display: inline-block;
-}
-.masthead-nav > li + li {
-  margin-left: 20px;
-}
-.masthead-nav > li > a {
-  padding-left: 0;
-  padding-right: 0;
-  font-size: 16px;
-  font-weight: bold;
-  //color: #fff; // IE8 proofing
-  //color: rgba(255,255,255,.75);
-  border-bottom: 2px solid transparent;
-}
-.masthead-nav > li > a:hover,
-.masthead-nav > li > a:focus {
-  background-color: transparent;
-  border-bottom-color: rgba(255,255,255,.25);
-}
-.masthead-nav > .active > a,
-.masthead-nav > .active > a:hover,
-.masthead-nav > .active > a:focus {
-  //color: #fff;
-  border-bottom-color: #000;
+.header a {
+  color: none;
+  text-decoration: none;
 }
 
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
-  }
-  .masthead-nav {
-    float: right;
-  }
+.logo-thick {
+  font-weight: 700;
+  font-size: 170%;
+  color: #000000;
 }
 
+.logo-thin{
+  font-weight: 300;
+  color: @brand-primary;
+  font-size: 170%;
+}
 
 //
-// Cover
-//
-
-.cover {
-  padding: 0 20px;
-}
-.cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
-}
-
-
-//
-// Footer
-//
-
-.mastfoot {
-  //color: #999; // IE8 proofing
-  //color: rgba(255,255,255,.5);
-}
-
-
-//
-// Affix and center
-//
-
-@media (min-width: 768px) {
-  // Pull out the header and footer
-  .masthead {
-    position: fixed;
-    top: 0;
-  }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
-  // Start the vertical centering
-  .site-wrapper-inner {
-    vertical-align: middle;
-  }
-  // Handle the widths
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 100%; // Must be percentage or pixels for horizontal alignment
-  }
-}
-
-@media (min-width: 992px) {
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 700px;
-  }
-}
-
 // Mixins
+//
+
 .box-shadow (@string) {
   -webkit-box-shadow: @string;
   -moz-box-shadow:    @string;
