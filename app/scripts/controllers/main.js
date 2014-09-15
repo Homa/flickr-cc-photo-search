@@ -9,8 +9,6 @@ angular.module('FlickrCC')
   		var searchTerm = $scope.searchTerm;
   		GetPicList.getPiclist(searchTerm)
   			.then(function(data){
-	  			console.log('main');
-	  			console.log(data);
   			});
   	};
 

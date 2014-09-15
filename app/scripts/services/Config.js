@@ -16,6 +16,7 @@ angular.module('FlickrCC')
         return API_KEY;
       },
 
+      // @return number of picture per API call
       getNoPerPage: function() {
         return PER_PAGE;
       }
