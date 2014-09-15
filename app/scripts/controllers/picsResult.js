@@ -2,7 +2,7 @@
 
 angular.module('FlickrCC')
 
-  .controller('PicsResultCtrl', function($scope, $location, GetPicsList) {
+  .controller('PicsResultCtrl', ['$scope', '$location', 'GetPicsList', function($scope, $location, GetPicsList) {
     
     // get search term and license values from url
 		var searchTerm = $location.search().q;
@@ -13,4 +13,4 @@ angular.module('FlickrCC')
         $scope.pics = data.data.photos.photo;
       });
       
-  });
+  }]);
