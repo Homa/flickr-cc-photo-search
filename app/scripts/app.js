@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('FlickerCC', ['ngAnimate', 'ngResource', 'ngRoute', 'ngTouch'])
+angular.module('FlickrCC', ['ngAnimate', 'ngResource', 'ngRoute', 'ngTouch'])
 
   .constant('version', 'v0.1.0')
 

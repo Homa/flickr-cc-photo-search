@@ -1,10 +1,19 @@
 'use strict';
 
-angular.module('FlickerCC')
+angular.module('FlickrCC')
 
-  .controller('MainCtrl', function($scope, $location, version) {
+  .controller('MainCtrl', function($scope, $location, version, GetPicList) {
+
+  	$scope.doSearch = function() {
+  		
+  		var searchTerm = $scope.searchTerm;
+  		GetPicList.getPiclist(searchTerm)
+  			.then(function(data){
+	  			console.log('main');
+	  			console.log(data);
+  			});
+  	};
 
     $scope.$path = $location.path.bind($location);
-    $scope.version = version;
 
   });

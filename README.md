@@ -1,4 +1,4 @@
-# FlickerCC
+# FlickrCC
 An app to search creative common photos on Flickr
 
 Scafolded with generator-angular-bootstrap
