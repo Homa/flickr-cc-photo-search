@@ -10,12 +10,13 @@ factory( 'GetPicsList', ['$http', '$log', 'Config', function($http, $log, Config
     return baseUrl;
   };
 
-  var getPicsList = function(searchTerm, license) {
+  var getPicsList = function(searchTerm, license, pageNo) {
     var method  = '&method=' + 'flickr.photos.search';
     var perPage = '&per_page=' + Config.getNoPerPage();
     var searchText = '&text=' + searchTerm;
     license = '&license=' + license;
-    var url = _getBaseUrl() + method + perPage + searchTerm + searchText + license;
+    var pageNumber = '&page=' + pageNo;
+    var url = _getBaseUrl() + method + perPage + searchTerm + searchText + license + pageNumber;
 
     return $http.jsonp(url)
             .success(function(result) {
@@ -24,7 +25,10 @@ factory( 'GetPicsList', ['$http', '$log', 'Config', function($http, $log, Config
             .error(function(reason){
               $log.error('Request Failed: ', reason);
             });
-          };
+  };
 
-  return { getPicsList: getPicsList };
+  return { 
+    getPicsList: getPicsList
+  };
+  
 }]);

@@ -58,8 +58,10 @@ button {
   border-color: @brand-primary-dark; 
 }
 
-.btn-primary:hover{
+.btn-primary:hover,
+.btn-primary:active {
   background-color: @brand-primary-dark;
+  border: none;
 }
 
 //
@@ -88,6 +90,30 @@ button {
   font-weight: 300;
   color: @brand-primary;
   font-size: 170%;
+}
+
+//
+// Pictures Result
+//
+
+.picturesWrapper {
+  position: absolute;
+  top: 100px;
+  bottom: 40px;
+  right: 0px;
+  left: 0px;
+  overflow-y: scroll;
+}
+
+.loadMoreButton {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+}
+
+.thumb {
+  vertical-align: baseline !important;
 }
 
 //

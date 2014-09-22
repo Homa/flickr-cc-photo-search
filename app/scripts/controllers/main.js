@@ -2,7 +2,7 @@
 
 angular.module('FlickrCC')
 
-  .controller('MainCtrl', function($scope, $location, GetPicsList) {
+  .controller('MainCtrl', function($scope, $location) {
     $scope.attribution = true;
     $scope.nonCommercial = true;
 
