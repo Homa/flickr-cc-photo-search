@@ -3,4 +3,6 @@ bower_components/
 node_modules/
 tmp/
 dist/
-.tmp/
+.tmp/styles/
+test/coverage/
+
