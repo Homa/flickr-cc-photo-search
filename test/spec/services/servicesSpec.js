@@ -3,16 +3,19 @@
 describe('Unit: Testing Service - GetPicsList', function() {
 
   var httpBackend,
-      GetPicsList;
+      GetPicsList,
+      Config;
 
   // Mock 'personalWebsiteApp' angular module
   beforeEach(module('FlickrCC'));
 
   // get GetPicsList service and $httpBackend
   // $httpBackend will be a mock by angular-mocks.js
-  beforeEach(inject( function($httpBackend, _GetPicsList_) {
+  beforeEach(inject( function($httpBackend, _GetPicsList_, _Config_) {
     httpBackend = $httpBackend;
     GetPicsList = _GetPicsList_;
+    Config = _Config_;
+
     var url = 'https://api.flickr.com/services/rest/?format=json&jsoncallback=JSON_CALLBACK&api_key=4ee9c51267d03806af2fd852a859fa5b&method=flickr.photos.search&per_page=50&text=green&license=4,2&page=1';
     httpBackend.whenJSONP(url).respond(200, 'mock data');
   }));
@@ -49,4 +52,31 @@ describe('Unit: Testing Service - GetPicsList', function() {
     expect(result.status).toEqual(200);
   });
 
+});
+
+describe('Unit: Testing Service - Config', function() {
+
+  var Config;
+  // Mock 'personalWebsiteApp' angular module
+  beforeEach(module('FlickrCC'));
+
+  // get GetPicsList service and $httpBackend
+  // $httpBackend will be a mock by angular-mocks.js
+  beforeEach(inject( function(_Config_) {
+    Config = _Config_;  
+  }));
+
+  it('should have a getAPIKey function', function(){
+    expect(angular.isFunction(Config.getAPIKey)).toBe(true);
+  });
+
+  it('should have a getNoPerPage function', function(){
+    expect(angular.isFunction(Config.getNoPerPage)).toBe(true);
+  });
+
+  it('getNoPerPage should return a number between 1 and 500', function(){
+    expect(Config.getNoPerPage() > 0 ).toBeTruthy();
+    expect(Config.getNoPerPage() <= 500 ).toBeTruthy();
+    
+  });
 });

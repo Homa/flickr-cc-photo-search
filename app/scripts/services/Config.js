@@ -7,6 +7,7 @@ angular.module('FlickrCC')
     var API_KEY = '4ee9c51267d03806af2fd852a859fa5b';
     
     // Number of picturs to be returned in each Flickr call
+    // The maximum allowed value is 500
     var PER_PAGE = 50;
 
     return {
