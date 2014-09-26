@@ -16,7 +16,7 @@ factory( 'GetPicsList', ['$http', '$log', 'Config', function($http, $log, Config
     var searchText = '&text=' + searchTerm;
     license = '&license=' + license;
     var pageNumber = '&page=' + pageNo;
-    var url = _getBaseUrl() + method + perPage + searchTerm + searchText + license + pageNumber;
+    var url = _getBaseUrl() + method + perPage + searchText + license + pageNumber;
 
     return $http.jsonp(url)
             .success(function(result) {
