@@ -74,9 +74,13 @@ describe('Unit: Testing Service - Config', function() {
     expect(angular.isFunction(Config.getNoPerPage)).toBe(true);
   });
 
-  it('getNoPerPage should return a number between 1 and 500', function(){
-    expect(Config.getNoPerPage() > 0 ).toBeTruthy();
-    expect(Config.getNoPerPage() <= 500 ).toBeTruthy();
+  describe('Unit: Testing Service - Config getNoPerPage function', function() {
+
+    it('should return a number between 1 and 500', function(){
+      expect(Config.getNoPerPage() > 0 ).toBeTruthy();
+      expect(Config.getNoPerPage() <= 500 ).toBeTruthy();
+    });
     
   });
+
 });
