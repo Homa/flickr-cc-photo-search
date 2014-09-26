@@ -29,7 +29,7 @@ describe('Unit: Testing Service - GetPicsList', function() {
     expect(angular.isFunction(GetPicsList.getPicsList)).toBe(true);
   });
 
-  it('should set searchResult on successful search', function() {
+  it('should set result on successful search', function() {
 
     // set up some data for the http call to return and test later.
     var returnedPromise = GetPicsList.getPicsList('green', '4,2', 1);
